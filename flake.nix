@@ -30,10 +30,12 @@
       hlib = homelib.lib;
       nixpkgsFor = hlib.genNixpkgsFor {
         inherit nixpkgs;
-        overlays = [mozilla.overlays.firefox] ++ (hlib.collectInputOverlays (attrValues (removeAttrs inputs ["self"])));
+        overlays = system: (inputs.homedesk.lib.selectOverlays [ "default" system "firefox" ]) ++ (homebase.lib.selectOverlays [ "default" system ]) ++ (self.lib.selectOverlays [ "default" system ]);
       };
     in {
       formatter = std.mapAttrs (system: pkgs: pkgs.default) inputs.alejandra.packages;
+      lib.overlays = hlib.aggregateOverlays (attrValues (removeAttrs inputs [ "nixpkgs" "alejandra" ]));
+      lib.selectOverlays = hlib.selectOverlays' self;
       homeManagerModules.default = {lib, ...}: {
         options.signal.media.flakeInputs = with lib;
           mkOption {
