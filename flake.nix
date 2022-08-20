@@ -30,7 +30,7 @@
       hlib = homelib.lib;
       nixpkgsFor = hlib.genNixpkgsFor {
         inherit nixpkgs;
-        overlays = [ mozilla.overlays.firefox ] ++ (hlib.collectInputOverlays (attrValues (removeAttrs inputs [ "self" ])));
+        overlays = [mozilla.overlays.firefox] ++ (hlib.collectInputOverlays (attrValues (removeAttrs inputs ["self"])));
       };
     in {
       formatter = std.mapAttrs (system: pkgs: pkgs.default) inputs.alejandra.packages;
@@ -45,15 +45,18 @@
             ./home-manager.nix
           ]
           ++ (hlib.collectInputModules (attrValues (removeAttrs inputs ["self"])));
-          config = {};
+        config = {};
       };
       homeConfigurations =
         mapAttrs (system: pkgs: {
           default = hlib.genHomeConfiguration {
             inherit pkgs;
-            modules = [self.homeManagerModules.default ({ pkgs, ... }: {
-              config.programs.firefox.package = pkgs.latest.firefox-nightly-bin;
-            })];
+            modules = [
+              self.homeManagerModules.default
+              ({pkgs, ...}: {
+                config.programs.firefox.package = pkgs.latest.firefox-nightly-bin;
+              })
+            ];
           };
         })
         nixpkgsFor;
