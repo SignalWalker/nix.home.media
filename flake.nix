@@ -6,10 +6,23 @@
       url = github:kamadorueda/alejandra;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    homelib = {
+      url = github:signalwalker/nix.home.lib;
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.alejandra.follows = "alejandra";
+    };
+    homebase = {
+      url = github:signalwalker/nix.home.base;
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.alejandra.follows = "alejandra";
+      inputs.homelib.follows = "homelib";
+    };
     homedesk = {
       url = github:signalwalker/nix.home.desktop;
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.alejandra.follows = "alejandra";
+      inputs.homelib.follows = "homelib";
+      inputs.homebase.follows = "homebase";
     };
     # games
     # modloader64 = {
@@ -23,9 +36,8 @@
     ...
   }:
     with builtins; let
-      homebase = inputs.homedesk.inputs.homebase;
-      homelib = homebase.inputs.homelib;
-      mozilla = inputs.homedesk.inputs.mozilla;
+      homebase = inputs.homebase;
+      homelib = inputs.homelib;
       std = nixpkgs.lib;
       hlib = homelib.lib;
       nixpkgsFor = hlib.genNixpkgsFor {
@@ -46,7 +58,7 @@
           [
             ./home-manager.nix
           ]
-          ++ (hlib.collectInputModules (attrValues (removeAttrs inputs ["self"])));
+          ++ (hlib.collectInputModules (attrValues (removeAttrs inputs ["self" "homebase" "homelib"])));
         config = {};
       };
       homeConfigurations =
