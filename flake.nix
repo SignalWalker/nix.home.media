@@ -36,45 +36,33 @@
     ...
   }:
     with builtins; let
-      homebase = inputs.homebase;
-      homelib = inputs.homelib;
       std = nixpkgs.lib;
-      hlib = homelib.lib;
-      nixpkgsFor = hlib.genNixpkgsFor {
-        inherit nixpkgs;
-        overlays = system: (inputs.homedesk.lib.selectOverlays ["default" system "firefox"]) ++ (homebase.lib.selectOverlays ["default" system]) ++ (self.lib.selectOverlays ["default" system]);
-      };
+      hlib = inputs.homelib.lib;
+      home = hlib.home;
     in {
       formatter = std.mapAttrs (system: pkgs: pkgs.default) inputs.alejandra.packages;
-      lib.overlays = hlib.aggregateOverlays (attrValues (removeAttrs inputs ["nixpkgs" "alejandra"]));
-      lib.selectOverlays = hlib.selectOverlays' self;
-      homeManagerModules.default = {lib, ...}: {
-        options.signal.media.flakeInputs = with lib;
-          mkOption {
-            type = types.attrsOf types.anything;
-            default = inputs;
-          };
-        imports =
-          [
-            ./home-manager.nix
-          ]
-          ++ (hlib.collectInputModules (attrValues (removeAttrs inputs ["self" "homebase" "homelib"])));
-        config = {};
-      };
-      homeConfigurations =
-        mapAttrs (system: pkgs: {
-          default = hlib.genHomeConfiguration {
-            inherit pkgs;
-            modules = [
-              self.homeManagerModules.default
-              ({pkgs, ...}: {
-                config.programs.firefox.package = pkgs.latest.firefox-nightly-bin;
-              })
+      signalModules.default = {
+        name = "home.media.default";
+        dependencies = hlib.signal.dependency.default.fromInputs {
+          inherit inputs;
+          filter = ["homelib"];
+        };
+        outputs = dependencies: {
+          homeManagerModules.default = {lib, ...}: {
+            options.signal.media.flakeInputs = with lib;
+              mkOption {
+                type = types.attrsOf types.anything;
+                default = dependencies;
+              };
+            imports = [
+              ./home-manager.nix
             ];
+            config = {};
           };
-        })
-        nixpkgsFor;
-      packages = hlib.genHomeActivationPackages self.homeConfigurations;
-      apps = hlib.genHomeActivationApps self.homeConfigurations;
+        };
+      };
+      homeConfigurations = home.genConfigurations self;
+      packages = home.genActivationPackages self.homeConfigurations;
+      apps = home.genActivationApps self.homeConfigurations;
     };
 }
