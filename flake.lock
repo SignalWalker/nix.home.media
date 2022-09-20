@@ -100,7 +100,7 @@
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "homebase",
+          "homedesk",
           "xremap",
           "nixpkgs"
         ]
@@ -275,15 +275,14 @@
         ],
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "xremap": "xremap"
+        ]
       },
       "locked": {
-        "lastModified": 1663694936,
-        "narHash": "sha256-M2vAyV+oyc+aXaTeWOVuLgqNaAxsaxZ21GZXXXPX0bI=",
+        "lastModified": 1663695258,
+        "narHash": "sha256-q9DUKgY7v/Q8qYDBSCum1FJhbC+opJeuMQcsqILM3GY=",
         "owner": "signalwalker",
         "repo": "nix.home.base",
-        "rev": "5a11399281305691c36dd76bbc2c8c69ee601127",
+        "rev": "d8b95e3bee4e22353d11643ca9a4b74556777fbe",
         "type": "github"
       },
       "original": {
@@ -309,14 +308,15 @@
           "nixpkgs"
         ],
         "polybar-scripts": "polybar-scripts",
-        "wired": "wired"
+        "wired": "wired",
+        "xremap": "xremap"
       },
       "locked": {
-        "lastModified": 1663695010,
-        "narHash": "sha256-mMmrSb8kELZtvyJ76G/QGKkyd7qnxpfpn1LnrP2QRxg=",
+        "lastModified": 1663695475,
+        "narHash": "sha256-sEhGVDTFy+LGipS0lVAoCxn+dP2l71ArdQp/FH+FMeU=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "e1eae40e13372494112d624db46ec41ea041fda0",
+        "rev": "14312a042cafc1a2dd1e8dfebec044b0d5549bcd",
         "type": "github"
       },
       "original": {
@@ -538,12 +538,12 @@
     "xremap": {
       "inputs": {
         "alejandra": [
-          "homebase",
+          "homedesk",
           "alejandra"
         ],
         "crane": "crane",
         "nixpkgs": [
-          "homebase",
+          "homedesk",
           "nixpkgs"
         ]
       },
