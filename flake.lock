@@ -312,11 +312,11 @@
         "xremap": "xremap"
       },
       "locked": {
-        "lastModified": 1666203865,
-        "narHash": "sha256-zhPsqp3+KEbawL0hBy2L9eZmHTY+0ExlIfv3c3DfVvo=",
+        "lastModified": 1666206351,
+        "narHash": "sha256-+e2XkDC1t2zC+RsB+7vf4ZvnqK8WChynXLVJi1Q0xpg=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "6a917d5501ab650caff08f1631671a652ae83dd2",
+        "rev": "0856138fe8976c10aad37a8dfa053d3d46f6aa79",
         "type": "github"
       },
       "original": {
