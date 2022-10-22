@@ -245,6 +245,22 @@
         "type": "github"
       }
     },
+    "helixSrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666400690,
+        "narHash": "sha256-VzJWMqOF6mppzv2KsRJ6LpD3xxYhVPk0018Qj1kBblk=",
+        "owner": "helix-editor",
+        "repo": "helix",
+        "rev": "d7d0d5ffb79b6f2e09c6ab8af6e112c41e6f73e8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "helix-editor",
+        "repo": "helix",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -322,6 +338,7 @@
           "alejandra"
         ],
         "ash-scripts": "ash-scripts",
+        "helixSrc": "helixSrc",
         "homebase": [
           "homebase"
         ],
@@ -337,11 +354,11 @@
         "xremap": "xremap"
       },
       "locked": {
-        "lastModified": 1666454083,
-        "narHash": "sha256-8agja6259xm7PxtXnwKjGWqb+/zgCZRIxa21KU4bRpY=",
+        "lastModified": 1666465626,
+        "narHash": "sha256-GzVYaVw8H01oGA6AMRuPAgX13KuSRb2FJG2ObeZltJg=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "8b36a1374b1617be27e6b5421ecaf71e3657889a",
+        "rev": "df63fc8196dde291c12fded0efa0c6938b064a50",
         "type": "github"
       },
       "original": {
