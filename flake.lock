@@ -248,11 +248,11 @@
     "helixSrc": {
       "flake": false,
       "locked": {
-        "lastModified": 1667932561,
-        "narHash": "sha256-xuA1k+grdbRUY+XfFLvu3dFj1/ayDfA1KpkNBTwYZgA=",
+        "lastModified": 1667936469,
+        "narHash": "sha256-vKbhe4Y1I6/FRCWhkKZL3f+Kr+X83Pz5FGhjJkyDe5U=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "d8e9c85f5ec10433eb17f8f240e08e765a218cfa",
+        "rev": "07d31572734dedfd850d9d978fafe80278a88a3d",
         "type": "github"
       },
       "original": {
@@ -354,11 +354,11 @@
         "xremap": "xremap"
       },
       "locked": {
-        "lastModified": 1667935109,
-        "narHash": "sha256-QQSw+gxLmIuQiEzEziuNZw4v9FXFFXIKrI7Y6KjlUm4=",
+        "lastModified": 1667936950,
+        "narHash": "sha256-yISW2k/9u+XNWGSOG6ehLX4C1b2h4XfuS6WzUcmoImw=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "5b7f7f9c553f6ec9994060e3459f57ef78906bfd",
+        "rev": "5e168dd31f6726450850af17f8e9d684f3cf0265",
         "type": "github"
       },
       "original": {
