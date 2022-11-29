@@ -298,11 +298,11 @@
         "wired": "wired"
       },
       "locked": {
-        "lastModified": 1669740805,
-        "narHash": "sha256-7/wLykDULGOg8qZE4rFTmQynFTXIkkeLbSc71VWYttk=",
+        "lastModified": 1669743220,
+        "narHash": "sha256-JlSIWbpk0h889eznGecL803Ph5FIpxQdU0jh5EaVbG4=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "adddf32b2e04c22e743f090e860bb3e0eb6c72fa",
+        "rev": "a679ae6e5ff4eb825e510419cbaf06de5ab194d4",
         "type": "github"
       },
       "original": {
