@@ -29,6 +29,11 @@
     #   url = github:signalwalker/nix.games.modloader64;
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    # audio
+    beetsSrc = {
+      url = "github:beetbox/beets";
+      flake = false;
+    };
   };
   outputs = inputs @ {
     self,
