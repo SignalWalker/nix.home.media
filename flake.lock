@@ -364,11 +364,11 @@
         "yofi": "yofi"
       },
       "locked": {
-        "lastModified": 1686267495,
-        "narHash": "sha256-WOJNX5YM0xwXMLv6dD5wrSpGYw1U0ct8lOACszGkGsU=",
+        "lastModified": 1686267670,
+        "narHash": "sha256-b7uiizwyimjxURwSK6dlz5GkHei4oyFtIAALnBLTkIs=",
         "owner": "signalwalker",
         "repo": "nix.home.desktop",
-        "rev": "ba5247eb8e43e0b49d4f6ac994e1d59b93b22d2b",
+        "rev": "f56aa86f57d9a36de6ef0d2b5fef8485c7c2a4bb",
         "type": "github"
       },
       "original": {
