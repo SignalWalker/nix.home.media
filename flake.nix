@@ -10,6 +10,10 @@
       url = "github:beetbox/beets";
       flake = false;
     };
+    # harkinian = {
+    #   url = "github:HarbourMasters/Shipwright";
+    #   flake = false;
+    # };
   };
   outputs = inputs @ {
     self,
