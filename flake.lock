@@ -9,11 +9,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714332968,
-        "narHash": "sha256-DVAMHUa4M0kjhK9soNclnZ/QDuNtGsUMgKCpGd8TYEs=",
+        "lastModified": 1715198765,
+        "narHash": "sha256-q2oTMen8E1YUbNyU4chPOj728/YR0RzdpN+bNjZX2QU=",
         "owner": "kamadorueda",
         "repo": "alejandra",
-        "rev": "98556f8ecb3286e8123286071a307733a99cf763",
+        "rev": "bb688cc2c22e43b3cd710eadc0340399c2de3151",
         "type": "github"
       },
       "original": {
@@ -25,11 +25,11 @@
     "beetsSrc": {
       "flake": false,
       "locked": {
-        "lastModified": 1714577812,
-        "narHash": "sha256-HGyVT0fQ2FvLwFEfJTnFwS74yr30J1f+mMJgTh4ghKs=",
+        "lastModified": 1715112984,
+        "narHash": "sha256-x4gzqoR0B6vPz+bNvVHaH1maA2szKYCH2yfQJM2Z+Gc=",
         "owner": "beetbox",
         "repo": "beets",
-        "rev": "34a59f98b3bc73bf3f2593150c5eb75427f4247c",
+        "rev": "c75f07a0da6c622d3cd0f5aad0a08edaea360dad",
         "type": "github"
       },
       "original": {
@@ -78,11 +78,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1714562304,
-        "narHash": "sha256-Mr3U37Rh6tH0FbaDFu0aZDwk9mPAe7ASaqDOGgLqqLU=",
+        "lastModified": 1715037484,
+        "narHash": "sha256-OUt8xQFmBU96Hmm4T9tOWTu4oCswCzoVl+pxSq/kiFc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "bcd44e224fd68ce7d269b4f44d24c2220fd821e7",
+        "rev": "ad7efee13e0d216bf29992311536fce1d3eefbef",
         "type": "github"
       },
       "original": {
