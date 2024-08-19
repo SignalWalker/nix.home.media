@@ -25,11 +25,11 @@
     "beetsSrc": {
       "flake": false,
       "locked": {
-        "lastModified": 1723453178,
-        "narHash": "sha256-vmuYbACEKwlcKnnXDrvjuYg4L4nFQLLT9qZm+5BOnQw=",
+        "lastModified": 1724051296,
+        "narHash": "sha256-SZBjVvwS5eAUbXTsOCC/Xlo1NZKZDgy+NiPhim/BAFs=",
         "owner": "beetbox",
         "repo": "beets",
-        "rev": "093949bf2bd13cc31ea3cf9fb804a08109a7b3d9",
+        "rev": "38a26af14947d5e585dcdfe064d015202ee96847",
         "type": "github"
       },
       "original": {
@@ -78,11 +78,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1723891200,
-        "narHash": "sha256-uljX21+D/DZgb9uEFFG2dkkQbPZN+ig4Z6+UCLWFVAk=",
+        "lastModified": 1724015816,
+        "narHash": "sha256-hVESnM7Eiz93+4DeiE0a1TwMeaeph1ytRJ5QtqxYRWg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a0d6390cb3e82062a35d0288979c45756e481f60",
+        "rev": "9aa35efbea27d320d0cdc5f922f0890812affb60",
         "type": "github"
       },
       "original": {
