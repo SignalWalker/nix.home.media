@@ -1,9 +1,9 @@
 {
   description = "Home manager configuration - media";
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     alejandra = {
-      url = github:kamadorueda/alejandra;
+      url = "github:kamadorueda/alejandra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     beetsSrc = {
