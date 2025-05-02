@@ -15,25 +15,31 @@
     #   flake = false;
     # };
   };
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    ...
-  }:
-    with builtins; let
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      ...
+    }:
+    with builtins;
+    let
       std = nixpkgs.lib;
-    in {
+    in
+    {
       formatter = std.mapAttrs (system: pkgs: pkgs.default) inputs.alejandra.packages;
-      homeManagerModules.default = {lib, ...}: {
-        options.signal.media.flakeInputs = with lib;
-          mkOption {
-            type = types.attrsOf types.anything;
-            default = inputs;
-          };
-        imports = [
-          ./home-manager.nix
-        ];
-        config = {};
-      };
+      homeManagerModules.default =
+        { lib, ... }:
+        {
+          options.signal.media.flakeInputs =
+            with lib;
+            mkOption {
+              type = types.attrsOf types.anything;
+              default = inputs;
+            };
+          imports = [
+            ./home-manager.nix
+          ];
+          config = { };
+        };
     };
 }
