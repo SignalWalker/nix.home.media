@@ -10,6 +10,10 @@
       url = "github:beetbox/beets";
       flake = false;
     };
+    bizhawk = {
+      url = "github:SignalWalker/BizHawk"; # TODO :: switch to TASEmulators/BizHawk if they merge my pull request
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
     # harkinian = {
     #   url = "github:HarbourMasters/Shipwright";
     #   flake = false;
