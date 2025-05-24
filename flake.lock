@@ -25,16 +25,34 @@
     "beetsSrc": {
       "flake": false,
       "locked": {
-        "lastModified": 1745315813,
-        "narHash": "sha256-k+Fcs6vxNhdEPNL6KWrrrYezmjq8W+qJ8J4N80mdvYU=",
+        "lastModified": 1747925645,
+        "narHash": "sha256-6ChFN/uDc0i7O1YTqax7nPNFKlzySvoPUFdZ2y6TrBg=",
         "owner": "beetbox",
         "repo": "beets",
-        "rev": "5d010e95ec8940d59aac9f9c0dd987a77f617dd8",
+        "rev": "e439c04d89d14d993a2b381ad92ad7dd1b72c733",
         "type": "github"
       },
       "original": {
         "owner": "beetbox",
         "repo": "beets",
+        "type": "github"
+      }
+    },
+    "bizhawk": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1748035151,
+        "narHash": "sha256-0hGJLx7DcjrxSJTY4aZYfS3zSIkg4EzQQdqDiQUoCsA=",
+        "owner": "SignalWalker",
+        "repo": "BizHawk",
+        "rev": "dfbd82e3dd4e982c01581615272f8b6bfeb0f051",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SignalWalker",
+        "repo": "BizHawk",
         "type": "github"
       }
     },
@@ -78,11 +96,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1746300365,
-        "narHash": "sha256-thYTdWqCRipwPRxWiTiH1vusLuAy0okjOyzRx4hLWh4=",
+        "lastModified": 1717179513,
+        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f21e4546e3ede7ae34d12a84602a22246b31f7e0",
+        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "24.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1747958103,
+        "narHash": "sha256-qmmFCrfBwSHoWw7cVK4Aj+fns+c54EBP8cGqp/yK410=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fe51d34885f7b5e3e7b59572796e1bcb427eccb1",
         "type": "github"
       },
       "original": {
@@ -96,7 +130,8 @@
       "inputs": {
         "alejandra": "alejandra",
         "beetsSrc": "beetsSrc",
-        "nixpkgs": "nixpkgs"
+        "bizhawk": "bizhawk",
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "rust-analyzer-src": {
